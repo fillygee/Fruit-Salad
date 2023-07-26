@@ -67,13 +67,13 @@ async function createNewFruit(event) {
 
 	let messageStatus = document.querySelector("#message");
 	if (response.status === 201) {
-		e.target.fruitInput.value = "";
+		event.target.fruitInput.value = "";
 		messageStatus.textContent = "Fruit successfully created";
 		setTimeout(() => {
 			messageStatus.textContent = "";
 		}, 4000); // counts in milliseconds, if there's no message, the message will clear itself
 	} else {
-		e.target.fruitInput.value = "";
+		event.target.fruitInput.value = "";
 		messageStatus.textContent =
 			"This fruit already exists. Please add a different fruit";
 		setTimeout(() => {
